@@ -29,8 +29,6 @@ const Layout = ({
       withCredentials: true,
     });
 
-    console.log("response", response);
-
     if (response.status === "success") {
       dispatch(
         registerUser({ isAuthenticated: true, currentUser: response.data.user })
