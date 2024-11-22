@@ -25,6 +25,7 @@ const Login = () => {
     });
 
     if (response.status === "success") {
+      localStorage.setItem("auth", response.token);
       if (location.state !== null) {
         navigate(location.state.from.pathname);
       } else {

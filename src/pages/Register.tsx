@@ -40,6 +40,7 @@ const Register = () => {
     const response: any = await apiPost({ apiPath: "/auth/signUp", data });
 
     if (response.status === "success") {
+      localStorage.setItem("auth", response.token);
       navigate("/");
 
       dispatch(

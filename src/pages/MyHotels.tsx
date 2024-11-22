@@ -71,6 +71,7 @@ const MyHotels = () => {
 
   useEffect(() => {
     fetchMyHotels();
+    console.log("token", localStorage.getItem("auth"));
   }, []);
 
   if (isLoading) {
