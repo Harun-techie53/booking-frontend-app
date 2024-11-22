@@ -15,9 +15,6 @@ const axiosInstance = () => {
   instance.defaults.timeout = 60000;
   instance.defaults.baseURL = API_BASE_URL;
   instance.defaults.withCredentials = true;
-  const authData = localStorage?.getItem("auth")
-    ? JSON.parse(localStorage.getItem("auth") || "")
-    : "";
 
   if (token) {
     instance.defaults.headers.common["Authorization"] = "Bearer " + token;
